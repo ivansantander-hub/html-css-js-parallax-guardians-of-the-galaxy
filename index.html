@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of the Galaxy Movies - Parallax</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <section class="section-one">
+        <img src="img/bg1.png" class="layer bg1" id="layer" data-speed=".2">
+        <img src="img/bg2.png" class="layer bg2" id="layer" data-speed=".2">
+        <img src="img/groot.png" class="layer groot" id="layer" data-speed="-.28">
+        <img src="img/gamora.png" class="layer gamora" id="layer" data-speed="-.19">
+        <img src="img/starlord.png" class="layer starlord" id="layer" data-speed="-.15">
+        <img src="img/rocket.png" class="layer rocket" id="layer" data-speed="-.21">
+        <img src="img/drax.png" class="layer drax" id="layer" data-speed="-.16">
+        <img src="img/planet1.png" class="layer planet1" id="layer" data-speed=".3">
+        <h2 class="layer banner-text" data-speed=".7">GUARDIANS OF THE GALAXY</h2>
+    </section>
+    <section class="section-two">
+        <h2>Title movies</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae magni porro reiciendis molestias repellendus iusto assumenda blanditiis! Veritatis quibusdam aut facere, quos quis repudiandae aspernatur! Quia dolor similique voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae magni porro reiciendis molestias repellendus iusto assumenda blanditiis! Veritatis quibusdam aut facere, quos quis repudiandae aspernatur! Quia dolor similique voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae magni porro reiciendis molestias repellendus iusto assumenda blanditiis! Veritatis quibusdam aut facere, quos quis repudiandae aspernatur! Quia dolor similique voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae magni porro reiciendis molestias repellendus iusto assumenda blanditiis! Veritatis quibusdam aut facere, quos quis repudiandae aspernatur! Quia dolor similique voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae magni porro reiciendis molestias repellendus iusto assumenda blanditiis! Veritatis quibusdam aut facere, quos quis repudiandae aspernatur! Quia dolor similique voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae magni porro reiciendis molestias repellendus iusto assumenda blanditiis! Veritatis quibusdam aut facere, quos quis repudiandae aspernatur! Quia dolor similique voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae magni porro reiciendis molestias repellendus iusto assumenda blanditiis! Veritatis quibusdam aut facere, quos quis repudiandae aspernatur! Quia dolor similique voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae magni porro reiciendis molestias repellendus iusto assumenda blanditiis! Veritatis quibusdam aut facere, quos quis repudiandae aspernatur! Quia dolor similique voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestiae magni porro reiciendis molestias repellendus iusto assumenda blanditiis! Veritatis quibusdam aut facere, quos quis repudiandae aspernatur! Quia dolor similique voluptate.</p>
+    </section>
+
+    <script>
+        document.addEventListener('scroll',parallax);
+        function parallax(){
+            console.log("ok")
+            document.querySelectorAll('.layer').forEach(layer=>{
+                const speed = layer.getAttribute('data-speed');
+                let scroll = window.scrollY;
+                layer.style.transform=`translateY(${scroll*speed}px)`
+            });
+        };
+    </script>
+</body>
+</html>
