@@ -35,15 +35,18 @@ body{
 }
 .section-one img{
     position: absolute;
-    min-height: 100vh;
 }
 .bg2{
     z-index: 1000;
     width: 100%;
+    min-height: 100vh;
+
 }
 .bg1{
     z-index: 2000;
     width: 100%;
+    min-height: 100vh;
+
 }
 .planet1{
     z-index: 2000;
@@ -91,4 +94,15 @@ body{
     font-family: sans-serif;
     font-size: 1.5em;
     letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 600px){
+    .section-one h2{
+        font-size: 2vh;
+    }
+
+    .section-one{
+        height: 40vh;
+    }
+
 }

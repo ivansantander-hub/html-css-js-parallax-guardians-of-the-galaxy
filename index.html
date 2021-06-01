@@ -27,7 +27,6 @@
     <script>
         document.addEventListener('scroll',parallax);
         function parallax(){
-            console.log("ok")
             document.querySelectorAll('.layer').forEach(layer=>{
                 const speed = layer.getAttribute('data-speed');
                 let scroll = window.scrollY;
